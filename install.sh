@@ -10,6 +10,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 # symlink dotfiles
+ln -sf ~/dotfiles/.zprezto ~/.zprezto
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zpreztorc ~/.zpreztorc
