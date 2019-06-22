@@ -19,3 +19,6 @@ ln -sf ~/dotfiles/.vim ~/.vim
 # change shell
 chsh -s $(which zsh)
 
+source .zshrc
+source .zpreztorc
+
