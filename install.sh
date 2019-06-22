@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# symlink pure
 ln -s "$PWD/zsh.d/pure.zsh" /usr/local/share/zsh/site-functions/prompt_pure_setup
 ln -s "$PWD/zsh.d/async.zsh" /usr/local/share/zsh/site-functions/async
 
-#ln -sf ~/dotfiles/.vimrc ~/.vimrc
+# symlink dotfiles
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-#ln -sf ~/dotfiles/.vim ~/.vim
-#chsh -s /usr/local/bin/zsh
+ln -sf ~/dotfiles/.vim ~/.vim
+chsh -s /usr/local/bin/zsh
 
+# add neobundle
+git submodule add https://github.com/Shougo/neobundle.vim.git .vim/bundle/neobundle.vim
