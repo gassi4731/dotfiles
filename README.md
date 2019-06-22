@@ -1,4 +1,5 @@
 # dotfiles
+super simple dotfiles.
 includes .zshrc and .vimrc setting.
 
 ## how to use
