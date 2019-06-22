@@ -1,6 +1,10 @@
 #!/bin/bash
 
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -s "$PWD/zsh.d/pure.zsh" /usr/local/share/zsh/site-functions/prompt_pure_setup
+ln -s "$PWD/zsh.d/async.zsh" /usr/local/share/zsh/site-functions/async
+
+#ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vim ~/.vim
-ln -sf ~/dotfiles/.oh-my-zsh ~/.oh-my-zsh
+#ln -sf ~/dotfiles/.vim ~/.vim
+#chsh -s /usr/local/bin/zsh
+

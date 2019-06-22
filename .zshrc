@@ -1,12 +1,21 @@
 # path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
-export PATH=~/.cargo/bin:$PATH
+
+# alias
+alias lsa="ls -la"
+alias ls="ls -GF"
+alias gls="gls --color"
+
+# color
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+
+# pure
+autoload -U promptinit; promptinit
+export PURE_PROMPT_SYMBOL=🐶🍻
+zstyle :prompt:pure:path color cyan
+zstyle ':prompt:pure:prompt:*' color cyan
+zstyle ':prompt:pure:git:branch' color magenta
+prompt pure
 
 # cool-peco
 # === cool-peco init ===
@@ -29,3 +38,6 @@ if [ -f '/Users/ToshimitsuKugimoto/Library/google-cloud-sdk/completion.zsh.inc' 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/ToshimitsuKugimoto/.sdkman"
 [[ -s "/Users/ToshimitsuKugimoto/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ToshimitsuKugimoto/.sdkman/bin/sdkman-init.sh"
+
+# terminal color
+#export CLICOLOR=1
