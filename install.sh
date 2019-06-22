@@ -8,7 +8,7 @@ ln -s "$PWD/zsh.d/async.zsh" /usr/local/share/zsh/site-functions/async
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.vim ~/.vim
-chsh -s /usr/local/bin/zsh
+chsh -s $(which zsh)
 
 # add neobundle
 git submodule add https://github.com/Shougo/neobundle.vim.git .vim/bundle/neobundle.vim
