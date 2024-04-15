@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 #
 # Executes commands at the start of an interactive session.
 #
@@ -26,7 +24,7 @@ alias gc-m="git commit -m"
 alias gp="git push"
 alias gp-h="git push origin HEAD"
 alias g-fix="gpgconf --kill gpg-agent"
-alias g-clean= "git branch --merged|egrep -v '\*|develop|staging|master|main'|xargs git branch -d"
+alias g-clean= "!f () {git branch --merged|egrep -v '\*|develop|staging|master|main'|xargs git branch -d}"
 
 # color
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
@@ -106,5 +104,5 @@ eval "$(anyenv init -)"
 # PostgreSQL
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# mysql
+export PATH=/usr/local/mysql/bin:$PATH
